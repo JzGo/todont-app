@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import ToDontsList from './ToDontsList'
+import ToDontsList from './ToDontsList';
+import ToDontForm from './ToDontForm'
 
 const toDontsList: Array<Object> = [
   { title: 'oversleep', description: 'sleeping too much' },
@@ -14,9 +15,11 @@ function App() {
     [
       <h1>To Don't</h1>,
       <h3>Remember that thing you're not supposed to do.</h3>,
-      <ToDontsList toDonts={toDonts} />
+      <ToDontsList toDonts={toDonts} />,
+      <ToDontForm addToDont={setToDonts} toDonts={toDonts}/>
     ]
   )
 }
+
 
 export default App;
